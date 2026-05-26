@@ -2,13 +2,21 @@ import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import type { ComplianceResponse } from '@/app/data';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+export const dynamic = 'force-dynamic';
+
+function createOpenAIClient() {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    return null;
+  }
+  return new OpenAI({ apiKey });
+}
 
 export async function POST(request: Request) {
   try {
-    if (!process.env.OPENAI_API_KEY) {
+    const openai = createOpenAIClient();
+
+    if (!openai) {
       return NextResponse.json(
         { error: 'Missing OPENAI_API_KEY server configuration.' },
         { status: 500 },
