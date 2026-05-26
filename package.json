@@ -1,0 +1,40 @@
+{
+  "name": "ad-compliance-ai-agent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriensenghor/ad-compliance-ai-agent.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adriensenghor/ad-compliance-ai-agent/issues"
+  },
+  "homepage": "https://github.com/adriensenghor/ad-compliance-ai-agent#readme",
+  "description": "",
+  "dependencies": {
+    "next": "^16.2.6",
+    "openai": "^6.39.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.6",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^6.0.3"
+  }
+}
